@@ -189,6 +189,8 @@ var Module = Class.extend({
 	 */
 	socketNotificationReceived: function (notification, payload) {
 		Log.log(this.name + " received a socket notification: " + notification + " - Payload: " + payload);
+		this.hide(0);
+		this.sendNotification("show", payload)
 	},
 
 	/* suspend()
